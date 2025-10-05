@@ -5,6 +5,18 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+  script: [
+    {
+      type: "module",
+      innerHTML: `
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+          chatflowid: "3c484af8-2354-43a9-af68-ccb60b6ea3ec",
+          apiHost: "https://chat.sena.my",
+        })
+      `
+    }
+  ]
 });
 
 const loading = ref(true);
